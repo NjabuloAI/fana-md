@@ -10,19 +10,7 @@ fana({
   reaction: "🖼️"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
-const fakeQuoted = {
-      key: {
-        participant: '0@s.whatsapp.net',
-        remoteJid: '0@s.whatsapp.net',
-        id: m.id
-      },
-      message: { conversation: "Toxic Verified By WhatsApp" },
-      contextInfo: {
-        forwardingScore: 999,
-        isForwarded: true
-      }
-    };
-          
+
   if (!arg[0]) {
     repondre('Which image?');
     return;
@@ -46,7 +34,17 @@ const fakeQuoted = {
       zk.sendMessage(dest, {
         image: { url: results[i].url },
         caption: `•`,
-      }, { quoted: fakeQuoted, ...ms });
+              }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: { conversation: "Toxic Verified By WhatsApp" },       
+      }
+            }
+        } });
     }
   }
 });
+
