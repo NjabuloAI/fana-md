@@ -32,20 +32,29 @@ fana({
         url: img 
       }, 
       caption: resultText
-    });
+     }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
    await zk.sendMessage(dest, { 
-      image: { 
-        url: img 
-      },
+      image: { url: img },
      caption: `
-*${index + 1}.* ${video.title}
 🎧Duration: ${video.duration}
 🔎Views: ${video.views}
 🔊Channel: ${video.author.name}
 
 *⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ↻*
-0:00 ──〇─────── :  *${video.timestamp}*`,
+0:00 ──〇─────── :  ${video.duration}*`,
         contextInfo: {
          externalAdReply: {
          title: video.title,
