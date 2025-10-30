@@ -179,9 +179,39 @@ fana({ nomCom: "jb", categorie: "General" }, async (dest, zk, commandeOptions) =
                         await zk.sendMessage(dest, { react: { text: "⬇️", key: receivedMsg.key } });
                         break;
                     case "8":
-                        await zk.sendMessage(dest, { text: "Books Menu" });
-                        await zk.sendMessage(dest, { react: { text: "⬇️", key: receivedMsg.key } });
-                        break;
+    const booksMenu = `╭───────────⊷
+┊▢nᥲmᥱ :  *ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+┊▢ρrᥱfιx :  *[ ${s.PREFIXE} ]*
+┊▢modᥱ : *${mode}*
+┊▢dᥲtᥱ : *${date}*
+┊___________________________
+┊  *【 BOOKS MENU】⇳︎*
+┊  ①◦➛njᥲbᥙᥣo        
+┊  ②◦➛ᥕιkιρᥱdιᥲ     
+┊  ③◦➛ᥱᥣᥱmᥱnts                    
+┊  ④◦➛bιbᥣᥱι            
+┊  ⑤◦➛sᥙrᥲh               
+┊  ⑥◦ᥴoᥣor               
+┊  ⑦◦➛ᥲgrιᥴᥙᥣtᥙrᥱ                  
+┊  ⑧◦➛ᥴontᥱnt               
+┊  ⑨◦➛ᥱngᥣιsh               
+┊  ⑩◦➛hoᥣᥣbook               
+┊  ⑪◦➛ᥣᥲngᥙᥲgᥱ                 
+┊  ⑫◦➛1-10
+┊  ⑬◦➛A-Z
+┊  ⑭◦➛tᥱᥲᥴhᥱr
+┊  ⑮ᥲnsᥕᥱr
+┊  ⑯ᥴoᥙntrყ
+┊  ⑰ᥕoᥣd
+┊___________________________
+┊books mᥱnᥙ ᥴommᥲnds ᥲvᥲιᥣᥲbᥣᥱ 
+╰┬──────────⊷⳹
+┌┤🌇 *hᥲᥣᥣo fᥲmιᥣყ  ${greeting}*
+┊╰────────────────⊷`;
+
+    await zk.sendMessage(dest, { text: booksMenu });
+    await zk.sendMessage(dest, { react: { text: "⬇️", key: receivedMsg.key } });
+    break;
                     case "9":
                         await zk.sendMessage(dest, { text: "Search Menu" });
                         await zk.sendMessage(dest, { react: { text: "⬇️", key: receivedMsg.key } });
