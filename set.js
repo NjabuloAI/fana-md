@@ -20,6 +20,9 @@ module.exports = { session: process.env.SESSION_ID || 'zokk',
    
     //process.env.AUTO_READ_STATUS//             
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "yes",
+
+    //process.env.AUTO_BIO//
+    AUTO_BIO : process.env.AUTO_BIO || 'yes',
    
     //process.env.AUTOREACT_STATUS//             
     AUTOREACT_STATUS : process.env.AUTOREACT_STATUS || 'yes',
